@@ -30,25 +30,30 @@ Peripheral neuropathy causes foot complications that require **continuous monito
 - **False Alert Rate**: 3.5%
 
 ---
-## 🛠 Components Required & Bill of Materials
-📌 Refer to **BOM.md** for the complete list of components and connections.
+## 🛠 Components Required with Bill of Materials
+| Item                   | Quantity | Description                                               | Cost (INR) |
+|-----------------------|-----------|-----------------------------------------------------------|------------|
+| VSD Squadron Mini     | 2         | RISC-V based microcontroller board                        | 2000       |
+| FSR Sensors           | 1         | Set of 4 force-sensitive resistors for pressure detection | 800        |
+| OLED Display          | 1         | For visual alerts and system status                       | 400        |
+| Resistors & Capacitors| 1 set     | For circuit completion                                    | 300        |
+| Zero PCB              | 1         | For component mounting                                    | 300        |
+| **Total Cost**        |           |                                                           | **3800**   |
+
+🔗 [Purchase Components](#)  
 
 ---
-## ⚙ Technical Implementation
-### 🔹 **Sensor Configuration**
-- **Four-point strategic pressure detection**
-- **Real-time calibration for personalized thresholds**
-- **Dynamic pressure distribution mapping**
-- **Continuous data sampling at 10Hz**
-
-### 🔹 **Protection Framework**
-#### **Software Protection**
-- **Advanced Sensor Validation**: Range verification (0-4095), Rate-of-change monitoring, Cross-sensor correlation checks
-- **System Health Monitoring**: Power supervision, Communication integrity verification, Memory tracking
-
-#### **Hardware Protection**
-- **Redundant Sensing**: Multi-FSR deployment with cross-validation algorithms
-- **Physical Safeguards**: Environmental protection, Power conditioning, EMI shielding
+## 🔌 Pin Connections
+| Component          | VSD Squadron Mini Pin | Description                               |
+|-------------------|----------------------|-------------------------------------------|
+| FSR 1             | ADC0                 | Front left pressure sensor                |
+| FSR 2             | ADC1                 | Front right pressure sensor               |
+| FSR 3             | ADC2                 | Back left pressure sensor                 |
+| FSR 4             | ADC3                 | Back right pressure sensor                |
+| OLED SDA          | I2C SDA              | OLED display data line                    |
+| OLED SCL          | I2C SCL              | OLED display clock line                   |
+| OLED VCC          | 3.3V                 | OLED power supply                         |
+| OLED GND          | GND                  | Ground connection                         |
 
 ---
 ## ✅ Validation Results
@@ -77,10 +82,6 @@ Peripheral neuropathy causes foot complications that require **continuous monito
 - 🔹 Mobile application development
 - 🔹 Cloud-based data analytics
 - 🔹 Electronic health records (EHR) integration
-
----
-## 🖥 Implementation Code
-📂 **See [src/](./src/) folder for firmware implementation.**
 
 ---
 ## 📸 Project Media
