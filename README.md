@@ -84,17 +84,20 @@ Peripheral neuropathy causes foot complications that require **continuous monito
 - 🔹 Electronic health records (EHR) integration
 
 ---
-## 📸 Project Media
-🎥 **[Application Video](#)**
+##🎥 **[Application Video](#)**
+
+
+https://github.com/user-attachments/assets/VID-20250209-WA0026(1)
+
+
+
+
 <video width="640" height="360" controls>
   <source src="assets/VID-20250209-WA0026(1).mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-🎥 **[Demo Video](#)**  
-<video width="640" height="360" controls>
-  <source src="assets/lv_0_20250201190752.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+##🎥 **[Demo Video](#)**  
+https://github.com/user-attachments/assets/VID-20250209-WA0026(1)
 🖼 **[PCB Image 1](#)** | **[PCB Image 2](#)**  
 
 ---
