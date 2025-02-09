@@ -46,14 +46,14 @@ Peripheral neuropathy causes foot complications that require **continuous monito
 ## 🔌 Pin Connections
 | Component          | VSD Squadron Mini Pin | Description                               |
 |-------------------|----------------------|-------------------------------------------|
-| FSR 1             | ADC0                 | Front left pressure sensor                |
-| FSR 2             | ADC1                 | Front right pressure sensor               |
-| FSR 3             | ADC2                 | Back left pressure sensor                 |
-| FSR 4             | ADC3                 | Back right pressure sensor                |
-| OLED SDA          | I2C SDA              | OLED display data line                    |
-| OLED SCL          | I2C SCL              | OLED display clock line                   |
-| OLED VCC          | 3.3V                 | OLED power supply                         |
-| OLED GND          | GND                  | Ground connection                         |
+| FSR 1             | PD6                  | Front left pressure sensor                |
+| FSR 2             | PD6                  | Front right pressure sensor               |
+| FSR 3             | PD5                  | Back left pressure sensor                 |
+| FSR 4             | PD5                  | Back right pressure sensor                |
+| 16X2 LED SDA      | I2C SDA              | OLED display data line                    |
+| 16X2 SCL          | I2C SCL              | OLED display clock line                   |
+| 16X2 VCC          | 3.3V                 | OLED power supply                         |
+| 16X2 GND          | GND                  | Ground connection                         |
 
 ---
 ## ✅ Validation Results
@@ -85,8 +85,16 @@ Peripheral neuropathy causes foot complications that require **continuous monito
 
 ---
 ## 📸 Project Media
-🎥 **[Application Video](#)**  
+🎥 **[Application Video](#)**
+<video width="640" height="360" controls>
+  <source src="video-file.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 🎥 **[Demo Video](#)**  
+<video width="640" height="360" controls>
+  <source src="video-file.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 🖼 **[PCB Image 1](#)** | **[PCB Image 2](#)**  
 
 ---
