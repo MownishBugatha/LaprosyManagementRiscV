@@ -87,12 +87,12 @@ Peripheral neuropathy causes foot complications that require **continuous monito
 ## 📸 Project Media
 🎥 **[Application Video](#)**
 <video width="640" height="360" controls>
-  <source src="video-file.mp4" type="video/mp4">
+  <source src="assets/VID-20250209-WA0026(1).mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 🎥 **[Demo Video](#)**  
 <video width="640" height="360" controls>
-  <source src="video-file.mp4" type="video/mp4">
+  <source src="assets/VID-20250209-WA0026(1).mp4.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 🖼 **[PCB Image 1](#)** | **[PCB Image 2](#)**  
