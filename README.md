@@ -90,6 +90,10 @@ Peripheral neuropathy causes foot complications that require **continuous monito
 (https://github.com/MownishBugatha/LaprosyManagementRiscV/tree/main/assets)
 
 
+https://github.com/user-attachments/assets/85d98fa4-36eb-45d0-9994-1f9559315db7
+
+
+
 
 
 <video width="640" height="360" controls>
