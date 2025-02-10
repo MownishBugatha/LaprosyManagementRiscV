@@ -60,6 +60,145 @@ Peripheral neuropathy causes foot complications that require **continuous monito
 | 16X2 GND          | GND                  | Ground connection                         |
 
 ---
+##  Project Code
+
+```c
+#include <debug.h>
+#include <ch32v00x.h>
+#include <ch32v00x_gpio.h>
+#include <ch32v00x_adc.h>
+
+#define SDA_PIN GPIO_Pin_1  // PC1
+#define SCL_PIN GPIO_Pin_2  // PC2
+#define BUZZER_PIN GPIO_Pin_5 // PD5
+#define LCD_Address 0x27
+#define FSR_CHANNEL ADC_Channel_0  // PD0
+#define OVERLOAD_THRESHOLD_PERCENT 10
+
+// Function prototypes
+void lcd_send_cmd(unsigned char cmd);
+void lcd_send_data(unsigned char data);
+void lcd_send_str(const char *str);
+void lcd_init(void);
+void delay_ms(unsigned int ms);
+void GPIO_INIT(void);
+void i2c_write(unsigned char dat);
+void i2c_start(void);
+void i2c_stop(void);
+void ADC_INIT(void);
+uint16_t ADC_Read(uint8_t channel);
+void calibrate_fsr(void);
+void get_user_details(void);
+void buzzer_alert(uint8_t state);
+
+// Global variables
+char user_name[] = "Patient";
+uint8_t user_age = 30;
+uint16_t entered_weight = 75;
+uint32_t calibration_factor = 0;
+uint8_t overload_flag = 0;
+
+void delay_ms(unsigned int ms) {
+    for (unsigned int i = 0; i < ms; i++) {
+        for (unsigned int j = 0; j < 8000; j++) {
+            __NOP();
+        }
+    }
+}
+
+void GPIO_INIT(void) {
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC | RCC_APB2Periph_GPIOD, ENABLE);
+
+    GPIO_InitTypeDef GPIO_InitStructure = {
+        .GPIO_Pin = SCL_PIN | SDA_PIN,
+        .GPIO_Mode = GPIO_Mode_Out_OD,
+        .GPIO_Speed = GPIO_Speed_50MHz
+    };
+    GPIO_Init(GPIOC, &GPIO_InitStructure);
+    GPIO_SetBits(GPIOC, SCL_PIN | SDA_PIN);
+
+    GPIO_InitStructure.GPIO_Pin = BUZZER_PIN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+    GPIO_ResetBits(GPIOD, BUZZER_PIN);
+}
+
+void ADC_INIT(void) {
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1 | RCC_APB2Periph_GPIOD, ENABLE);
+    
+    GPIO_InitTypeDef GPIO_InitStructure = {
+        .GPIO_Pin = GPIO_Pin_0,
+        .GPIO_Mode = GPIO_Mode_AIN
+    };
+    GPIO_Init(GPIOD, &GPIO_InitStructure);
+    
+    ADC_InitTypeDef ADC_InitStructure = {
+        .ADC_Mode = ADC_Mode_Independent,
+        .ADC_ScanConvMode = DISABLE,
+        .ADC_ContinuousConvMode = ENABLE,
+        .ADC_ExternalTrigConv = ADC_ExternalTrigConv_None,
+        .ADC_DataAlign = ADC_DataAlign_Right,
+        .ADC_NbrOfChannel = 1
+    };
+    ADC_Init(ADC1, &ADC_InitStructure);
+    
+    ADC_Cmd(ADC1, ENABLE);
+    ADC_ResetCalibration(ADC1);
+    while(ADC_GetResetCalibrationStatus(ADC1));
+    ADC_StartCalibration(ADC1);
+    while(ADC_GetCalibrationStatus(ADC1));
+}
+
+uint16_t ADC_Read(uint8_t channel) {
+    ADC_RegularChannelConfig(ADC1, channel, 1, ADC_SampleTime_241Cycles);
+    ADC_SoftwareStartConvCmd(ADC1, ENABLE);
+    while(!ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC));
+    return ADC_GetConversionValue(ADC1);
+}
+
+void buzzer_alert(uint8_t state) {
+    if (state) GPIO_SetBits(GPIOD, BUZZER_PIN);
+    else GPIO_ResetBits(GPIOD, BUZZER_PIN);
+}
+
+int main(void) {
+    GPIO_INIT();
+    ADC_INIT();
+    lcd_init();
+    delay_ms(100);
+
+    lcd_send_cmd(0x80);
+    lcd_send_str(" Leprosy Care ");
+    lcd_send_cmd(0xC0);
+    lcd_send_str(" Monitor v1.0 ");
+    delay_ms(2000);
+
+    get_user_details();
+    calibrate_fsr();
+
+    while (1) {
+        uint16_t raw = ADC_Read(FSR_CHANNEL);
+        uint16_t weight = (raw * calibration_factor) / 100;
+        
+        lcd_send_cmd(0x80);
+        char weight_str[16];
+        sprintf(weight_str, " Weight:%4d kg ", weight);
+        lcd_send_str(weight_str);
+        
+        uint16_t threshold = entered_weight + (entered_weight * OVERLOAD_THRESHOLD_PERCENT / 100);
+        overload_flag = weight > threshold;
+        
+        lcd_send_cmd(0xC0);
+        lcd_send_str(overload_flag ? " OVERLOAD! " : " Status: Normal ");
+        
+        buzzer_alert(overload_flag);
+        delay_ms(500);
+    }
+}
+```
+
+---
+
 ## ✅ Validation Results
 ### 🔹 **Performance Testing**
 - **Static Load Testing**: 100% detection rate
