@@ -1,8 +1,8 @@
 # 🏥 Smart Pressure-Sensing System for Neuropathy Patients
 
-![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Platform](https://img.shields.io/badge/Platform-RISC--V-blue)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+![Platform](https://img.shields.io/badge/Board-VSD--SquadronMini--yellow)
 
 🚀 **A RISC-V-based intelligent pressure monitoring system designed for early detection and prevention of foot ulcers in neuropathy patients.**
 
