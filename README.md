@@ -43,7 +43,7 @@ Peripheral neuropathy causes foot complications that require **continuous monito
 | **Subtotal**  |         |            |          |           |             | **Rs.1277.94** |
 
 🔗 **[Components Invoice Link](assets/electronics_comp_bill.pdf)**
-🔗 **[RISCV Invoice Link](assets/Receipt pay_PmMLirQc5wtLeY from VLSI System Design (Paid).pdf)**
+🔗 **[RISCV Invoice Link](assets/electronics_comp_bill.pdf)**
 🔗 [Purchase Components](#)  
 
 ---
