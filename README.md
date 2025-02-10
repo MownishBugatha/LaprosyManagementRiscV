@@ -42,8 +42,8 @@ Peripheral neuropathy causes foot complications that require **continuous monito
 | Dupont Jumper Wire Ribbon Cable (10cm) | EC-0965 | 85177012 | 1 | Rs.18.00 | IGST (18%) | Rs.21.24 |
 | **Subtotal**  |         |            |          |           |             | **Rs.1277.94** |
 
-🔗 **[Invoice Link](assets/electronics_comp_bill.pdf)**
-
+🔗 **[Components Invoice Link](assets/electronics_comp_bill.pdf)**
+🔗 **[RISCV Invoice Link](assets/electronics_comp_bill.pdf)**
 🔗 [Purchase Components](#)  
 
 ---
