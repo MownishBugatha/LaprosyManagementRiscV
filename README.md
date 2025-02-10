@@ -88,14 +88,14 @@ Peripheral neuropathy causes foot complications that require **continuous monito
 - 🔹 Electronic health records (EHR) integration
 
 ---
-##🎥 **[Application Video](#)**
+## 🎥 **[Application Video](#)**
 
 
 https://github.com/user-attachments/assets/86940ba5-5bb6-4a9a-8ae0-e8b7b6a2a2fb
 
 
 
-##🎥 **[Demo Video](#)**  
+## 🎥 **[Demo Video](#)**  
 
 
 
@@ -124,5 +124,3 @@ This **smart pressure-sensing system** marks a **breakthrough in preventive heal
 📧 **For collaboration and contributions, feel free to open issues or submit pull requests!**
 
 ---
-### 📝 License
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
