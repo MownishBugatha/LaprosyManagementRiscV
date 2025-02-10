@@ -30,15 +30,19 @@ Peripheral neuropathy causes foot complications that require **continuous monito
 - **False Alert Rate**: 3.5%
 
 ---
-## 🛠 Components Required with Bill of Materials
-| Item                   | Quantity | Description                                               | Cost (INR) |
-|-----------------------|-----------|-----------------------------------------------------------|------------|
-| VSD Squadron Mini     | 2         | RISC-V based microcontroller board                        | 2000       |
-| FSR Sensors           | 1         | Set of 4 force-sensitive resistors for pressure detection | 800        |
-| OLED Display          | 1         | For visual alerts and system status                       | 400        |
-| Resistors & Capacitors| 1 set     | For circuit completion                                    | 300        |
-| Zero PCB              | 1         | For component mounting                                    | 300        |
-| **Total Cost**        |           |                                                           | **3800**   |
+## 🛒 Bill of Materials (BOM)
+
+| No. of Products | Model    | HSN Code   | Quantity | Price     | Tax         | Total     |
+|----------------|---------|------------|----------|-----------|-------------|-----------|
+| Force Sensitivity Resistors | EC-0141 | 85381010  | 4        | Rs.199.00  | IGST (18%) | Rs.939.28  |
+| 16x2 Liquid Crystal Display | EC-0894 | 85177010  | 2        | Rs.226.00  | IGST (18%) | Rs.266.68  |
+| 5V Buzzer     | EC-1160 | 85437099   | 1        | Rs.15.00   | IGST (18%)  | Rs.17.70   |
+| Zero PCB      | EC-0364 | 85177010   | 1        | Rs.28.00   | IGST (18%)  | Rs.33.04   |
+| Dupont Jumper Wire Ribbon Cable (10cm) | EC-0897 | 85177011 | 1 | Rs.18.00 | IGST (18%) | Rs.21.24 |
+| Dupont Jumper Wire Ribbon Cable (10cm) | EC-0965 | 85177012 | 1 | Rs.18.00 | IGST (18%) | Rs.21.24 |
+| **Subtotal**  |         |            |          |           |             | **Rs.1277.94** |
+
+🔗 **[Invoice Link](https://www.electronicscomp.com/index.php?route=account/order/invoice&order_id=2869722)**
 
 🔗 [Purchase Components](#)  
 
@@ -50,9 +54,9 @@ Peripheral neuropathy causes foot complications that require **continuous monito
 | FSR 2             | PD6                  | Front right pressure sensor               |
 | FSR 3             | PD5                  | Back left pressure sensor                 |
 | FSR 4             | PD5                  | Back right pressure sensor                |
-| 16X2 LED SDA      | I2C SDA              | OLED display data line                    |
-| 16X2 SCL          | I2C SCL              | OLED display clock line                   |
-| 16X2 VCC          | 3.3V                 | OLED power supply                         |
+| 16X2 LED SDA      | I2C SDA              | 16x2 I2C display data line                |
+| 16X2 SCL          | I2C SCL              | 16x2 I2C display clock line               |
+| 16X2 VCC          | 3.3V                 | 16x2 I2C power supply                     |
 | 16X2 GND          | GND                  | Ground connection                         |
 
 ---
