@@ -87,24 +87,24 @@ Peripheral neuropathy causes foot complications that require **continuous monito
 ##🎥 **[Application Video](#)**
 
 
-(https://github.com/MownishBugatha/LaprosyManagementRiscV/tree/main/assets)
-
-
-https://github.com/user-attachments/assets/85d98fa4-36eb-45d0-9994-1f9559315db7
+https://github.com/user-attachments/assets/86940ba5-5bb6-4a9a-8ae0-e8b7b6a2a2fb
 
 
 
-
-
-<video width="640" height="360" controls>
-  <source src="assets/VID-20250209-WA0026(1).mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
 ##🎥 **[Demo Video](#)**  
-https://github.com/user-attachments/assets/VID-20250209-WA0026(1)
+
+
+
+https://github.com/user-attachments/assets/3431c0d4-fa45-4508-ba1d-4795ef8d45c2
+
+
+
+
 🖼 **[PCB Image 1](#)** | **[PCB Image 2](#)**  
 
----
+---![slipper_pcb_2d](https://github.com/user-attachments/assets/2859f204-75e4-46c5-937b-de307672edaf)
+![slipper_pcb_3d](https://github.com/user-attachments/assets/d3f1a799-7b68-4a77-b6bc-c508d2f0ac86)
+
 ## 🏁 Conclusion
 This **smart pressure-sensing system** marks a **breakthrough in preventive healthcare** for neuropathy patients. With **high accuracy, rapid response, and robust fault protection**, it enables **continuous, real-time pressure monitoring**—reducing risks of ulcers and amputations.
 
