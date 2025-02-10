@@ -2,7 +2,7 @@
 
 ![Platform](https://img.shields.io/badge/Platform-RISC--V-blue)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-![Platform](https://img.shields.io/badge/Board-VSD--SquadronMini--yellow)
+![Platform](https://img.shields.io/badge/Board-VSD--SquadronMini---yellow)
 
 🚀 **A RISC-V-based intelligent pressure monitoring system designed for early detection and prevention of foot ulcers in neuropathy patients.**
 
@@ -43,7 +43,7 @@ Peripheral neuropathy causes foot complications that require **continuous monito
 | **Subtotal**  |         |            |          |           |             | **Rs.1277.94** |
 
 🔗 **[Components Invoice Link](assets/electronics_comp_bill.pdf)**
-🔗 **[RISCV Invoice Link](assets/electronics_comp_bill.pdf)**
+🔗 **[RISCV Invoice Link](assets/Receipt pay_PmMLirQc5wtLeY from VLSI System Design (Paid).pdf)**
 🔗 [Purchase Components](#)  
 
 ---
